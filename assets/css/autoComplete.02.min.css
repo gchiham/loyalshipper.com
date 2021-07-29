@@ -9,7 +9,7 @@
   position: relative;
 }
 .autoComplete_wrapper > input {
-  width: 370px;
+  width: 100%;
   height: 40px;
   padding-left: 10px;
   font-size: 1rem;
@@ -73,7 +73,8 @@
 }
 @media only screen and (max-width: 600px) {
   .autoComplete_wrapper > input {
-    width: 18rem;
+    width: 100%;
   }
 }
-/*# sourceMappingURL=/sm/38debd88dbaf12078724075dd58d53e5259e5e982a7072de58f4a96dab354ff8.map */
+
+/*  sourceMappingURL=/sm/38debd88dbaf12078724075dd58d53e5259e5e982a7072de58f4a96dab354ff8.map */

@@ -1,6 +1,9 @@
-$(document).ready(function() {
+
+import {carTypeKey} from './config.js'
+
+export const callCarsApi = () => {
     // Add your API key below to test this code
-    var apiToken = 'Vjcg1k6loyLgR9NGDn6kuiBJUGbIBOFA36iICttpJFaVgyyCxrsrFXCnb4lZ';
+    const apiToken = carTypeKey;
 
     // Get all years and update vehicle_year select box
     $.get("https://carmakemodeldb.com/api/v1/car-lists/get/years/asd" + "?api_token=" + apiToken,
@@ -64,4 +67,4 @@ $(document).ready(function() {
     }).ajaxStop(function() {
       $('#loading').hide();
     });
-  });
+  }

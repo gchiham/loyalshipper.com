@@ -12,6 +12,9 @@ a {
   transition: all ease-in-out .3s;
 }
 
+
+
+
 a:hover {
   color: #808080;
 }
@@ -84,23 +87,29 @@ textarea:focus {
 }
 
 .btn-add {
-  width: 163px;
-  height: 43px;
-  background-color: #40B7FB;
-  border-radius: 5px;
+  
+
+  padding: 15px 32px;
+  text-align: center;
   float: right;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  vertical-align: middle;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center;
+          justify-content: right;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100px;
+  height: 43px;
+  border-radius: 5px;
+  border: 0;
   color: #fff;
+  font-size: 14px;
   font-weight: bold;
-  font-size: 12px;
+  background-color: #40B7FB;
+  margin: 20px auto;
+  cursor: pointer;
+
 }
 
 .btn-add:hover {
@@ -205,7 +214,7 @@ body .main .hero header .container {
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -216,7 +225,9 @@ body .main .hero header .container nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 0 0 0 0;
 }
+
 
 body .main .hero header .container nav ul li a {
   display: -webkit-box;
@@ -440,6 +451,13 @@ body .main .hero .container-emphasis .container .module form .wrap-vehicles::-we
   border-radius: 20px;
 }
 
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+
 body .main .hero .container-emphasis .container .module .btn-module {
   display: inline-block;
   padding: 15px 32px;
@@ -462,6 +480,34 @@ body .main .hero .container-emphasis .container .module .btn-module {
   margin: 20px auto;
   cursor: pointer;
 }
+
+
+body .main .hero .container-emphasis .container .module .btn-module:disabled  {
+  display: inline-block;
+  padding: 15px 32px;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 155px;
+  height: 43px;
+  border-radius: 5px;
+  border: 0;
+  background-color: #cccccc;
+  color: #666666;
+  font-size: 14px;
+  font-weight: bold;
+ 
+  margin: 20px auto;
+  cursor: pointer;
+}
+
+
+
 
 .center {
   width: 100%;
@@ -490,12 +536,22 @@ body .main #whyUs {
   padding: 100px 0;
 }
 
+
+
+body .main #catalog {
+  padding: 100px 0;
+ 
+
+}
+
 body .main #whyUs h2 {
   color: #3D6098;
   font-size: 28px;
   margin: 0 0 80px 0;
   text-align: center;
 }
+
+
 
 body .main #whyUs .wrap-whyus {
   display: -webkit-box;
@@ -529,17 +585,90 @@ body .main #whyUs .wrap-whyus__box {
 }
 
 body .main #whyUs .wrap-whyus__box .icon-box {
+ 
   height: 70px;
+  display: flex;
+  justify-content: center;
+}
+
+.icon-box {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 body .main #whyUs .wrap-whyus__box h3 {
   color: #ffffff;
   margin: 10px 0;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 body .main #whyUs .wrap-whyus__box p {
-  font-size: 12px;
+  font-size: 16px;
+  line-height: 30px;
+  color: #ffffff;
+  opacity: .7;
+}
+
+
+
+
+body .main #catalog h2 {
+  color: #3D6098;
+  font-size: 28px;
+  margin: 0 0 80px 0;
+  text-align: center;
+}
+
+body .main #catalog .wrap-whyus {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .main #catalog .wrap-whyus__box {
+  background-color: #3D6098;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  text-align: center;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: center;
+  padding: 45px 30px;
+  border-radius: 20px;
+  width: calc(28.3% - 13.2px);
+  margin: 0 0 20px 0;
+}
+
+body .main #catalog .wrap-whyus__box .icon-box {
+ 
+  height: 70px;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+body .main #catalog .wrap-whyus__box h3 {
+  color: #ffffff;
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+body .main #catalog .wrap-whyus__box p {
+  font-size: 16px;
   line-height: 30px;
   color: #ffffff;
   opacity: .7;
@@ -1078,6 +1207,21 @@ body .main footer ul li:nth-of-type(4) .authorise {
   body .main #whyUs .wrap-whyus__box {
     width: 100%;
   }
+
+
+  body .main #catalog h2 {
+    margin: 0 0 20px 0;
+  }
+  body .main #catalog .wrap-whyus {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    padding: 0 10px;
+  }
+  body .main #catalog .wrap-whyus__box {
+    width: 100%;
+  }
   body .main footer {
     padding: 20px 0;
   }
@@ -1136,7 +1280,8 @@ body .main footer ul li:nth-of-type(4) .authorise {
 
   body .main .hero .container-emphasis .container .module form .wrap-vehicles__item {
     padding: 10px;
-    width: 120%;
+  
+    width: 140%;
     background-color: #456BA9;
     border-radius: 5px;
     display: -webkit-box;
@@ -1157,3 +1302,170 @@ body .main footer ul li:nth-of-type(4) .authorise {
 
 
 }
+
+
+/* Parnerts Section */
+
+.wrap {
+  padding: 2.8rem;
+  position: relative;
+  width: 100%;
+  background: #eee;
+}
+
+.clients {
+    align-items: center;
+    -webkit-box-align: center;
+    display: grid;
+    gap: 4.8rem 4.8rem;
+    grid-template-columns: auto auto;
+    justify-items: center;
+    margin: 4.8rem auto;
+    max-width: 1024px; }
+
+.clients li {
+  list-style: none;
+  margin: 0;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+
+
+/* --- Images (gray logo) --- */
+.clients img {
+  -webkit-filter: grayscale(100%) brightness(10%) contrast(10%);
+          filter: grayscale(100%) brightness(10%) contrast(10%); }
+
+
+
+
+
+/* Slider */
+
+.slick-slide {
+    margin: 0px 20px;
+}
+
+.slick-slide img {
+    width: 60%;
+    height: 6rem;
+}
+
+.slick-slider
+{
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+            user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+
+  
+@media (min-width: 1024px) {
+  .clients {
+      grid-template-columns: auto auto auto auto; }
+      
+  }
+  
+  
+  

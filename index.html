@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/fontawesome/css/all.css">
     <link rel="stylesheet" href="assets/css/autoComplete.02.min.css">
+    <link rel="stylesheet" href="assets/css/translate.css">
 
     <title>APCARGOEXPRESS</title>
 </head>
@@ -25,47 +26,77 @@
                     <nav class="menu">
                         <ul>
                             <li><a href="">About us</a></li>
-                            <li><a href="">Reviews</a></li>
+                            <!-- <li><a href="">Reviews</a></li> -->
                             <li><a href="">Partners</a></li>
                             <li><a href="">Contact Us</a></li>
                             <li class="link-tel"><a href="tel:8887553040"><img src="assets/img/tel-icon.svg" alt="">
                                     888-755-3040</a></li>
                         </ul>
                     </nav>
+                    <div class="translate_wrapper">
+                        <div class="current_lang">
+                          <div class="lang">
+                            <img src="https://image.flaticon.com/icons/svg/299/299722.svg">
+                            <span class="lang-txt">EN</span> 
+                            <span class="fa fa-chevron-down chevron"></span>
+                          </div>
+                        </div>
+                        
+                        
+                        
+                        <div class="more_lang">
+                          <div class="lang selected" data-value='en'>
+                            <img src="https://image.flaticon.com/icons/svg/299/299722.svg">
+                            <span class="lang-txt">English<span> (US)</span></span>      
+                          </div>
+                         
+                          
+                          <div class="lang" data-value='es'>
+                             <img src="/assets/img/mexico.svg">
+                            <span class="lang-txt">Español</span>      
+                          </div>  
+                        </div>
+                      </div>
                 </div>
-            </header>
+             </header>
+
+         
+              
+
+
+
             <div class="container-emphasis">
                 <div class="container">
                     <div class="message">
-                        <h2>
+                        <h2 id="whyApc">
                             Why AP Cargo Express?
                         </h2>
-                        <p>
+                        <p id="whyApcDesc">
                             Taking a long trip can have many<br>obstacles present upon itself
                         </p>
-                        <a href="tel:8887553040">Call us Now</a>
+                        <a id="callNow" href="tel:8887553040">Call us Now</a>
                     </div>
 
                     <div class="module" >
                         <div class="stepOne">
-                            <h3>get free quote</h3>
+                            <h3 id="stepOneh3">get free quote</h3>
                             <form name="geoReference" id="geoReference" action="">
                               
                               
                                 <div class="wrap-form autoComplete_wrapper" >
-                                    <label for="">from</label>
+                                    <label id="from" for="">from</label>
                                     <input id="originPlace" class="input-location"  type="search" dir="ltr"  name="shipping_from" spellcheck=false autocorrect="off" autocomplete="off" autocapitalize="off">
                                     <!-- <input class="input-location" id="originPlace" name="shipping_from" type="text" placeholder="Enter City or Zip Code"> -->
                                    
                                 </div>
                                 <div class="wrap-form autoComplete_wrapper">
-                                    <label for="">to</label>
+                                    <label id="to"  for="">to</label>
                                     <!-- <input class="input-location" id="destinationPlace" name="shipping_to" type="text" placeholder="Enter City of Zip Code"> -->
                                     <input id="destinationPlace"  class="input-location"  type="search" dir="ltr"  name="shipping_to" spellcheck=false autocorrect="off" autocomplete="off" autocapitalize="off">
                                   
                                 </div>
                                 
-                                <button  type="button"  class="btn-module" id="goTwo" >Let's Go!</button>
+                                <button disabled type="button"  class="btn-module" id="goTwo" >Let's Go!</button>
                             </form>
                         </div>
 
@@ -132,7 +163,7 @@
                                     </div>
                                 </div>
                                 <div class="wrap-form-end">
-                                    <a id="add" onclick="addCar()" class="btn-add">Add</a>
+                                    <button type="button" id="addVehicule" onclick="addCar()"  class="btn-add">Add</button>
                                 </div>
                                 <h3>
                                     your vehicles
@@ -155,7 +186,7 @@
 
                                 <div class="center">
                                     <button type="button"  class="btn-module" id="backTwo">Back</button>
-                                    <button type="button" class="btn-module" id="goFour">Let's Go!</button>
+                                    <button  type="button" class="btn-module" id="goFour">Let's Go!</button>
                                  </div>
                                 
                             </form>
@@ -186,7 +217,7 @@
                              
                                 <div class="center">
                                     <button type="button"  class="btn-module" id="backThree">Back</button>
-                                    <button type="button" onclick="completeOrder()" class="btn-module" id="complete">Complete</button>
+                                    <button type="button" class="btn-module" id="complete">Complete</button>
                                  </div>
                             </form>
                         </div>
@@ -216,8 +247,8 @@
                         </p>
                     </div>
                     <div class="wrap-whyus__box">
-                        <div class="icon-box">
-                            <img src="assets/img/icon-box-2.png" alt="">
+                        <div class="icon-box" >
+                            <img  src="assets/img/icon-box-2.png" alt="">
                         </div>
                         <h3>Door to Door Service</h3>
                         <p>
@@ -236,13 +267,89 @@
                             traveling alone or for the first time. Whether its vehicle
                         </p>
                     </div>
+                    
                 </div>
             </div>
         </section>
+
+        <section>
+            <div class="wrap">
+                <h2 style="text-align: center;">Our Partners</h2>
+                <div class="clients customer-logos">
+                  <li><img src="/assets/img/partners/ebay.png" alt="ebay"></li>
+                  <li><img src="/assets/img/partners/copart-logo-black-removebg-preview.png" alt="copart"></li>
+                  <li><img src="/assets/img/partners/kia.png" alt="kia"></li>
+                  <li><img src="/assets/img/partners/toyota.png" alt="toyota"></li>
+                  <li><img src="/assets/img/partners/nissan.png" alt="nissan"></li>
+                  <li><img src="/assets/img/partners/IAA.png" alt="IAA"></li>
+                  <li><img src="/assets/img/partners/BMW.png" alt="bmw"></li>
+                </div>
+              </div>
+
+  
+
+        </section>
+        
+        <section id="catalog">
+            <div class="container">
+                <h2>We Moved</h2>
+                <div class="wrap-whyus">
+                    <div class="wrap-whyus__box">
+                        <div class="icon-box">
+                            <img src="assets/img/car-iconBox.png" alt="">
+                        </div>
+                        <h3>Cars</h3>
+                     
+                    </div>
+                    <div class="wrap-whyus__box">
+                        <div class="icon-box" >
+                            <img  src="assets/img/bike-iconBox.png" alt="">
+                        </div>
+                        <h3>Motorcycles</h3>
+                      
+
+                    </div>
+                    <div class="wrap-whyus__box">
+                        <div class="icon-box">
+                            <img src="assets/img/boat-iconBox.png" alt="">
+                        </div>
+                        <h3>Boats</h3>
+                      
+                    </div>
+
+                    <div class="wrap-whyus__box">
+                        <div class="icon-box">
+                            <img src="assets/img/rvs-iconBox.png" alt="">
+                        </div>
+                        <h3>RVs</h3>
+                      
+                    </div>
+
+                    <div class="wrap-whyus__box">
+                        <div class="icon-box">
+                            <img src="assets/img/utility-iconBox.png" alt="">
+                        </div>
+                        <h3>Utility equipment</h3>
+                      
+                    </div>
+                    
+                    <div class="wrap-whyus__box">
+                        <div class="icon-box">
+                            <img src="assets/img/hq-iconBox.png" alt="">
+                        </div>
+                        <h3>Heavy equipment</h3>
+                      
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        
+     <!--    
         <section id="googleReviews">
                 <script src="https://apps.elfsight.com/p/platform.js" defer></script>
                 <div class="elfsight-app-4e048e9d-82b3-46d8-9f8d-656a6bb923ad"></div>
-        </section>
+        </section> -->
         <footer>
             <div class="container">
                 <ul>
@@ -258,16 +365,7 @@
                             <a href="tel:8887553040">888-755-3040</a>
                         </div>
                     </li>
-                    <!---<li>
-                        <h3>Reviews</h3>
-                        <small>lorem ipsum lorem ipsum lorem</small>
-                        <div class="box">
-                            <a href="">Web review two</a>
-                        </div>
-                        <div class="box">
-                            <a href="">Web review two</a>
-                        </div>
-                    </li> -->
+              
                     <li>
                         <h3>Contact</h3>
                         <small>,</small>
@@ -279,7 +377,7 @@
                         <!-- <a href="">
                             <img src="assets/img/fb-icon.png" alt="">
                         </a> -->
-
+                   
                         <img class="authorise" src="assets/img/authorizenet.png" alt="">
                     </li>
                 </ul>
@@ -324,16 +422,18 @@
         </div>
     </div>
     
-    <script src="assets/js/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/lib/jquery-3.5.1.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
-  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
     <script src="assets/js/calendario.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
     <script src="assets/js/interaction.js"></script>
-    <script src="assets/js/carTypeApi.js"></script>
+    <script src="assets/js/scripts/manageVehicules.js"></script>
     <script src="assets/js/formValidation.js"></script>
+    <script type="module"  src="assets/js/translator.js"></script>
     
 
- <script src="./assets/js/autoComplete.min.js"></script>
+ <script src="./assets/js/lib/autoComplete.min.js"></script>
  <script>
      const autoCompleteJS = new autoComplete({
          selector: "#originPlace",
@@ -360,7 +460,7 @@
                      // Add class to the created element
                      message.setAttribute("class", "no_result");
                      // Add message text content
-                     message.innerHTML = `<span>Found No Results for "${data.query}"</span>`;
+                     message.innerHTML = `<span> No Results Found for: "${data.query}"</span>`;
                      // Append message element to the results list
                      list.prepend(message);
                  }
