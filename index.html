@@ -536,7 +536,7 @@
 				const source = await fetch(`https://quote.apcargoexpress.com/api?f=zip.lookup&q=${query}`);
 				// Data is array of `Objects` | `Strings`
 				const data = await source.json();
-				console.log(data)
+				//console.log(data)
 				results = true;
 				return data.data;
 			},
@@ -571,13 +571,13 @@
 			input: {
                 selection: (event) => {
 					const selection = event.detail.selection.value;
-					console.log(selection);
+					//console.log(selection);
 					autoCompleteJS.input.value =  selection.label;
 				},
 
 				close: (event) => {
                     const re = /\w+\s/g;
-                    console.log(autoCompleteJS.input.value);
+                    //console.log(autoCompleteJS.input.value);
 					if(!autoCompleteJS.input.value.match(re) && results === true) {
 						//const val = event.detail.matches[0].value;
                     	//autoCompleteJS.input.value =  val.label;
@@ -604,7 +604,7 @@
 				const source = await fetch(`https://quote.apcargoexpress.com/api?f=zip.lookup&q=${query}`);
 				// Data is array of `Objects` | `Strings`
 				const data = await source.json();
-				console.log(data)
+				//console.log(data)
 				resultsDtp = true
 				return data.data;
 			},
@@ -638,13 +638,13 @@
 			input: {
 				selection: (event) => {
 					const selection = event.detail.selection.value;
-					console.log(selection)
+					//console.log(selection)
 					autoCompleteTo.input.value =  selection.label;
 				},
 
 				close: (event) => {
 					const re = /\w+\s/g;
-					console.log(autoCompleteTo.input.value);
+					//console.log(autoCompleteTo.input.value);
 					if(!autoCompleteTo.input.value.match(re) && resultsDtp === true) {
 						//const val = event.detail.matches[0].value;
 						//autoCompleteTo.input.value =  val.label;
@@ -658,7 +658,7 @@
 		}
      });
 
-	 console.log('v1.0.5');
+	 console.log('v1.0.6');
 
  </script>
 
