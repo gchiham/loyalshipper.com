@@ -516,12 +516,14 @@
     
 
  <script src="./assets/js/lib/autoComplete.min.js"></script>
- <script>
-     var results = false;
-     const autoCompleteJS = new autoComplete({
+
+<script>
+
+	var results = false;
+	const autoCompleteJS = new autoComplete({
 		selector: "#originPlace",
 		placeHolder: "Enter City or Zip Code",
-		debounce: 300,
+		debounce: 150,
 
 		data: {
 			src: async (query) => {
@@ -572,8 +574,8 @@
                     const re = /\w+\s/g;
                     console.log(autoCompleteJS.input.value);
 					if(!autoCompleteJS.input.value.match(re) && results === true) {
-						const val = event.detail.matches[0].value;
-                    	autoCompleteJS.input.value =  val.label;
+						//const val = event.detail.matches[0].value;
+                    	//autoCompleteJS.input.value =  val.label;
                      }
 
                      if (!results) {
@@ -585,28 +587,28 @@
      });
 
 
-     var resultsDtp = false;
-     const autoCompleteTo = new autoComplete({
+	var resultsDtp = false;
+	const autoCompleteTo = new autoComplete({
          selector: "#destinationPlace",
          placeHolder: "Enter City or Zip Code",
-		 debounce: 300,
+		 debounce: 150,
 
-            data: {
-                src: async (query) => {
-                
-                    // Fetch Data from external Source
-                    const source = await fetch(`https://quote.apcargoexpress.com/api?f=zip.lookup&q=${query}`);
-                    // Data is array of `Objects` | `Strings`
-                    const data = await source.json();
-                    console.log(data)
-                    resultsDtp = true
-                    return data.data;
-                
-                },
-                // Data 'Object' key to be searched
-                keys: ["label", "zip"]
-            },
-         resultsList: {
+		data: {
+			src: async (query) => {
+				// Fetch Data from external Source
+				const source = await fetch(`https://quote.apcargoexpress.com/api?f=zip.lookup&q=${query}`);
+				// Data is array of `Objects` | `Strings`
+				const data = await source.json();
+				console.log(data)
+				resultsDtp = true
+				return data.data;
+			},
+
+			// Data 'Object' key to be searched
+			keys: ["label", "zip"]
+		},
+
+		resultsList: {
              element: (list, data) => {
                  if (!data.results.length) {
                      // Create "No Results" message element
@@ -621,36 +623,37 @@
                  }
              },
              noResults: true,
-         },
-         resultItem: {
-             highlight: true
-         },
-         events: {
-             input: {
-                selection: (event) => {
-                     const selection = event.detail.selection.value;
-                     console.log(selection)
-                     autoCompleteTo.input.value =  selection.label;
-                 },
-                 close: (event) => {
-                    const re = /\w+\s/g;
-                    console.log(autoCompleteTo.input.value);
-                     if(!autoCompleteTo.input.value.match(re) && resultsDtp === true){
-                        
-                    const val = event.detail.matches[0].value;
-                    autoCompleteTo.input.value =  val.label;
-                     }
+		},
 
-                     if(!resultsDtp){
-                        document.getElementById('destinationPlace').value = ''
-                     }
-                   
-               
-              }
-                
-             }
-         }
+		resultItem: {
+             highlight: true
+		},
+
+		events: {
+			input: {
+				selection: (event) => {
+					const selection = event.detail.selection.value;
+					console.log(selection)
+					autoCompleteTo.input.value =  selection.label;
+				},
+
+				close: (event) => {
+					const re = /\w+\s/g;
+					console.log(autoCompleteTo.input.value);
+					if(!autoCompleteTo.input.value.match(re) && resultsDtp === true) {
+						//const val = event.detail.matches[0].value;
+						//autoCompleteTo.input.value =  val.label;
+					}
+
+					if(!resultsDtp){
+						document.getElementById('destinationPlace').value = ''
+					}
+				}
+			}
+		}
      });
+
+	 console.log('v1.0.5');
 
  </script>
 
