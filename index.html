@@ -12,7 +12,12 @@
     <link rel="stylesheet" href="assets/css/autoComplete.02.min.css">
     <link rel="stylesheet" href="assets/css/translate.css">
     <link rel="icon" href="assets/img/ico.png">
-    <title>Car Shipping Quotes | Loyal Shipper</title>   
+    <title>Car Shipping Quotes | Loyal Shipper</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,2000,3000,7001,300&display=swap" rel="stylesheet" />
+
 </head>
 
 <body>
@@ -523,7 +528,7 @@
 	const autoCompleteJS = new autoComplete({
 		selector: "#originPlace",
 		placeHolder: "Enter City or Zip Code",
-		debounce: 150,
+		debounce: 100,
 
 		data: {
 			src: async (query) => {
@@ -591,7 +596,7 @@
 	const autoCompleteTo = new autoComplete({
          selector: "#destinationPlace",
          placeHolder: "Enter City or Zip Code",
-		 debounce: 150,
+		 debounce: 100,
 
 		data: {
 			src: async (query) => {
