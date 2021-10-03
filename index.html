@@ -519,68 +519,68 @@
  <script>
      var results = false;
      const autoCompleteJS = new autoComplete({
-         selector: "#originPlace",
-         placeHolder: "Enter City or Zip Code",
-            data: {
-                src: async (query) => {
-                
-                    // Fetch Data from external Source
-                    const source = await fetch(`https://quote.apcargoexpress.com/api?f=zip.lookup&q=${query}`);
-                    // Data is array of `Objects` | `Strings`
-                    const data = await source.json();
-                    console.log(data)
-                    results = true;
-                    return data.data;
-                
-                },
-                // Data 'Object' key to be searched
-                keys: ["label", "zip"]
-            },
-         resultsList: {
-             element: (list, data) => {
-                 if (!data.results.length) {
-                     // Create "No Results" message element
-                     const message = document.createElement("div");
-                     // Add class to the created element
-                     message.setAttribute("class", "no_result");
-                     // Add message text content
-                     message.innerHTML = `<span> No Results Found for: "${data.query}"</span>`;
-                     // Append message element to the results list
-                     list.prepend(message);
-                    results = false;
-                 }
-             },
-             noResults: true,
-         },
-         resultItem: {
-             highlight: true
-         },
-         events: {
-             
-             input: {
+		selector: "#originPlace",
+		placeHolder: "Enter City or Zip Code",
+		debounce: 300,
+
+		data: {
+			src: async (query) => {
+				// Fetch Data from external Source
+				const source = await fetch(`https://quote.apcargoexpress.com/api?f=zip.lookup&q=${query}`);
+				// Data is array of `Objects` | `Strings`
+				const data = await source.json();
+				console.log(data)
+				results = true;
+				return data.data;
+			},
+
+			// Data 'Object' key to be searched
+			keys: ["label", "zip"]
+		},
+
+		resultsList: {
+			element: (list, data) => {
+				if (!data.results.length) {
+					// Create "No Results" message element
+					const message = document.createElement("div");
+					// Add class to the created element
+					message.setAttribute("class", "no_result");
+					// Add message text content
+					message.innerHTML = `<span> No Results Found for: "${data.query}"</span>`;
+					// Append message element to the results list
+					list.prepend(message);
+					results = false;
+				}
+			},
+
+			noResults: true,
+		},
+
+		resultItem: {
+			highlight: true
+		},
+
+		events: {
+			input: {
                 selection: (event) => {
-                     const selection = event.detail.selection.value;
-                     console.log(selection)
-                     autoCompleteJS.input.value =  selection.label;
-                 },
-                 close: (event) => {
+					const selection = event.detail.selection.value;
+					console.log(selection);
+					autoCompleteJS.input.value =  selection.label;
+				},
+
+				close: (event) => {
                     const re = /\w+\s/g;
                     console.log(autoCompleteJS.input.value);
-                     if(!autoCompleteJS.input.value.match(re) && results === true){
-                        
-                    const val = event.detail.matches[0].value;
-                    autoCompleteJS.input.value =  val.label;
+					if(!autoCompleteJS.input.value.match(re) && results === true) {
+						const val = event.detail.matches[0].value;
+                    	autoCompleteJS.input.value =  val.label;
                      }
 
-                     if(!results){
-                        document.getElementById('originPlace').value = ''
+                     if (!results) {
+                        document.getElementById('originPlace').value = '';
                      }
-                   
-               
-              }
-                 
-             },
-             
+				}
+			}
          }
      });
 
@@ -589,6 +589,8 @@
      const autoCompleteTo = new autoComplete({
          selector: "#destinationPlace",
          placeHolder: "Enter City or Zip Code",
+		 debounce: 300,
+
             data: {
                 src: async (query) => {
                 
