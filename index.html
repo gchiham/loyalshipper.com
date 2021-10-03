@@ -102,7 +102,7 @@
                                   
                                 </div>
                                 
-                                <button disabled type="button"  class="btn-module goBtn" id="goTwo" >Let's Go!</button>
+                                <button disabled type="button"  class="btn-module goBtn" id="goTwo" onclick="$('#goTwo').show(); ga('send', 'event', 'Button', 'Click', 'Step1');" >Let's Go!</button>
                             </form>
                         </div>
 
@@ -111,8 +111,8 @@
                             <div id="datepicker" class="calendar"></div>
 
                              <div class="center">
-                                <button type="button"  class="btn-module backBtn" id="backOne">Back</button>
-                                <button type="button" class="btn-module goBtn" id="goThree">Let's Go!</button>
+                                <button type="button"  class="btn-module backBtn" id="backOne" onclick="$('#goThree').show(); ga('send', 'event', 'Button', 'Click', 'BackOne');" >Back</button>
+                                <button type="button" class="btn-module goBtn" id="goThree" onclick="$('#goThree').show(); ga('send', 'event', 'Button', 'Click', 'Step2');">Let's Go!</button>
                              </div>
                             
                          
@@ -191,8 +191,8 @@
                              
 
                                 <div class="center">
-                                    <button type="button"  class="btn-module backBtn" id="backTwo">Back</button>
-                                    <button  type="button" class="btn-module goBtn" id="goFour">Let's Go!</button>
+                                    <button type="button"  class="btn-module backBtn" id="backTwo" onclick="$('#backTwo').show(); ga('send', 'event', 'Button', 'Click', 'BackTwo');">Back</button>
+                                    <button  type="button" class="btn-module goBtn" id="goFour" onclick="$('#goFour').show(); ga('send', 'event', 'Button', 'Click', 'Step3');">Let's Go!</button>
                                  </div>
                                 
                             </form>
@@ -222,8 +222,8 @@
 
                              
                                 <div class="center">
-                                    <button type="button"  class="btn-module backBtn" id="backThree">Back</button>
-                                    <button type="button" class="btn-module" id="complete">Get Quote</button>
+                                    <button type="button"  class="btn-module backBtn" id="backThree" onclick="$('#backThree').show(); ga('send', 'event', 'Button', 'Click', 'BackThree');">Back</button>
+                                    <button type="button" class="btn-module" id="complete" onclick="$('#complete').show(); ga('send', 'event', 'Button', 'Click', 'Step4');">Get Quote</button>
                                  </div>
                             </form>
                         </div>
