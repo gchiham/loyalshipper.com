@@ -648,6 +648,7 @@
 					//console.log(autoCompleteTo.input.value);
 					if(!autoCompleteTo.input.value.match(re) && resultsDtp === true)
 					{
+						console.log('='+autoCompleteTo.input.value);
 						const val = event.detail.matches[0].value;
 						autoCompleteTo.input.value =  val.label;
 					}
