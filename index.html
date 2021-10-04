@@ -578,9 +578,10 @@
 				close: (event) => {
                     const re = /\w+\s/g;
                     //console.log(autoCompleteJS.input.value);
-					if(!autoCompleteJS.input.value.match(re) && results === true) {
-						//const val = event.detail.matches[0].value;
-                    	//autoCompleteJS.input.value =  val.label;
+					if(!autoCompleteJS.input.value.match(re) && results === true)
+					{
+						const val = event.detail.matches[0].value;
+                    	autoCompleteJS.input.value =  val.label;
                      }
 
                      if (!results) {
@@ -645,9 +646,10 @@
 				close: (event) => {
 					const re = /\w+\s/g;
 					//console.log(autoCompleteTo.input.value);
-					if(!autoCompleteTo.input.value.match(re) && resultsDtp === true) {
-						//const val = event.detail.matches[0].value;
-						//autoCompleteTo.input.value =  val.label;
+					if(!autoCompleteTo.input.value.match(re) && resultsDtp === true)
+					{
+						const val = event.detail.matches[0].value;
+						autoCompleteTo.input.value =  val.label;
 					}
 
 					if(!resultsDtp){
