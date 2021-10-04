@@ -578,7 +578,7 @@
 				close: (event) => {
                     const re = /\w+\s/g;
                     //console.log(autoCompleteJS.input.value);
-					if(!autoCompleteJS.input.value.match(re) && results === true)
+					if(!autoCompleteJS.input.value.match(re) && results === true && autoCompleteJS.input.value != '')
 					{
 						const val = event.detail.matches[0].value;
                     	autoCompleteJS.input.value =  val.label;
@@ -646,9 +646,8 @@
 				close: (event) => {
 					const re = /\w+\s/g;
 					//console.log(autoCompleteTo.input.value);
-					if(!autoCompleteTo.input.value.match(re) && resultsDtp === true)
+					if(!autoCompleteTo.input.value.match(re) && resultsDtp === true && autoCompleteTo.input.value != '')
 					{
-						console.log('='+autoCompleteTo.input.value);
 						const val = event.detail.matches[0].value;
 						autoCompleteTo.input.value =  val.label;
 					}
