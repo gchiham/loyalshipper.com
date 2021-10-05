@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <script async>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KM9KQFS');</script>
+    <!--<script async>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KM9KQFS');</script>-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -17,11 +17,19 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com"/>
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;700&display=swap" rel="stylesheet"/> 
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-208875476-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
 
+	  gtag('config', 'UA-208875476-1');
+	  gtag('config', 'AW-10781490552');
+	</script>
 </head>
 
 <body>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KM9KQFS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!--<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KM9KQFS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>-->
     <div class="main">
         <div class="hero">
             <header>
@@ -107,7 +115,8 @@
                                   
                                 </div>
                                 
-                                <button disabled type="button"  class="btn-module goBtn" id="goTwo" onclick="ga('send', 'event', 'Button', 'Click', 'Step1');" >Let's Go!</button>
+                                <!-- <button disabled type="button"  class="btn-module goBtn" id="goTwo" onclick="ga('send', 'event', 'Button', 'Click', 'Step1');" >Let's Go!</button> -->
+								<button disabled type="button"  class="btn-module goBtn" id="goTwo" onclick="gtag('event', 'Click',{'Step1', 'Button'});" >Let's Go!</button>
                             </form>
                         </div>
 
@@ -116,8 +125,10 @@
                             <div id="datepicker" class="calendar"></div>
 
                              <div class="center">
-                                <button type="button"  class="btn-module backBtn" id="backOne" onclick="ga('send', 'event', 'Button', 'Click', 'BackOne');" >Back</button>
-                                <button type="button" class="btn-module goBtn" id="goThree" onclick="ga('send', 'event', 'Button', 'Click', 'Step2');">Let's Go!</button>
+                                <button type="button"  class="btn-module backBtn" id="backOne" onclick="gtag( 'event', 'Click',{'BackOne', 'Button'});" >Back</button>
+                                <!-- <button type="button"  class="btn-module backBtn" id="backOne" onclick="ga('send', 'event', 'Button', 'Click', 'BackOne');" >Back</button> -->
+                                <button type="button" class="btn-module goBtn" id="goThree" onclick="gtag( 'event', 'Click',{'Step2', 'Button'});">Let's Go!</button>
+                                <!-- <button type="button" class="btn-module goBtn" id="goThree" onclick="ga('send', 'event', 'Button', 'Click', 'Step2');">Let's Go!</button> -->
                              </div>
                             
                          
@@ -196,8 +207,10 @@
                              
 
                                 <div class="center">
-                                    <button type="button"  class="btn-module backBtn" id="backTwo" onclick="ga('send', 'event', 'Button', 'Click', 'BackTwo');">Back</button>
-                                    <button  type="button" class="btn-module goBtn" id="goFour" onclick="ga('send', 'event', 'Button', 'Click', 'Step3');">Let's Go!</button>
+                                    <button type="button"  class="btn-module backBtn" id="backTwo" onclick="gtag( 'event', 'Click',{'BackTwo', 'Button'});">Back</button>
+                                    <!-- <button type="button"  class="btn-module backBtn" id="backTwo" onclick="ga('send', 'event', 'Button', 'Click', 'BackTwo');">Back</button> -->
+                                    <button  type="button" class="btn-module goBtn" id="goFour" onclick="gtag( 'event', 'Click',{'Step3', 'Button'});">Let's Go!</button>
+                                    <!-- <button  type="button" class="btn-module goBtn" id="goFour" onclick="ga('send', 'event', 'Button', 'Click', 'Step3');">Let's Go!</button> -->
                                  </div>
                                 
                             </form>
@@ -227,8 +240,10 @@
 
                              
                                 <div class="center">
-                                    <button type="button"  class="btn-module backBtn" id="backThree" onclick="ga('send', 'event', 'Button', 'Click', 'BackThree');">Back</button>
-                                    <button type="button" class="btn-module" id="complete" onclick="ga('send', 'event', 'Button', 'Click', 'Step4');">Get Quote</button>
+                                    <button type="button"  class="btn-module backBtn" id="backThree" onclick="gtag('event', 'Click',{'BackThree', 'Button'});">Back</button>
+                                    <!-- <button type="button"  class="btn-module backBtn" id="backThree" onclick="ga('send', 'event', 'Button', 'Click', 'BackThree');">Back</button> -->
+                                    <button type="button" class="btn-module" id="complete" onclick="gtag('event', 'Click',{'Step4', 'Button'});">Get Quote</button>
+                                    <!-- <button type="button" class="btn-module" id="complete" onclick="ga('send', 'event', 'Button', 'Click', 'Step4');">Get Quote</button> -->
                                  </div>
                             </form>
                         </div>
