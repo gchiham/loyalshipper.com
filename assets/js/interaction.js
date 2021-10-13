@@ -51,8 +51,8 @@ $(document).ready(function () {
     
     let originalPlace = $("#originPlace").val();
     let destinationPlace = $("#destinationPlace").val();
-	
-	  gtag('event', 'destinations', {'from': originalPlace, 'to': destinationPlace});	
+    
+    gtag('event', 'destinations', {'to': `'${destinationPlace}'`, 'from': `'${originalPlace}'`});  
     
   });
 
