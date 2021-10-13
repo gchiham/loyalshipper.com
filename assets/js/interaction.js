@@ -48,6 +48,12 @@ $(document).ready(function () {
   $("#goTwo").click(function () {
     $(".stepOne").css("display", "none");
     $(".stepTwo").css("display", "block");
+    
+    let originalPlace = $("#originPlace").val();
+    let destinationPlace = $("#destinationPlace").val();
+	
+	  gtag('event', 'destinations', {'from': originalPlace, 'to': destinationPlace});	
+    
   });
 
   $("#backOne").click(function () {
