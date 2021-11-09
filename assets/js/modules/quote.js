@@ -71,7 +71,7 @@ const completeQuote = () => {
 
 
   function leadNotification(){
-    fetch('http://157.245.209.206:2021/sendById/-792460544/?m=%3Cb%3E%F0%9F%9A%A8NEW%20GOOGLE%20LEAD%3C/b%3E%F0%9F%A5%B3',{
+    fetch('https://pnh01.com/api?f=tg&id=-792460544&message=%3Cb%3E%F0%9F%9A%A8NEW%20GOOGLE%20LEAD%3C/b%3E%F0%9F%A5%B3',{
       mode: "no-cors"
     })
     .then((res) =>{
@@ -81,8 +81,6 @@ const completeQuote = () => {
       console.error("Error:", error);
     });
   }
-  
-
 };
 
 
