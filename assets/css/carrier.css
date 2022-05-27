@@ -24,18 +24,7 @@ ul {
   margin: 0px;
 }
 
-input[type=text], select {
-  border-radius: 5px;
-  border: 0px;
-  height: 43px;
-  background-color: #5726c4;
-  color: #eeeeee;
-  padding: 0 10px;
-}
 
-input[type=text]:focus, select:focus {
-  outline: none;
-}
 
 textarea {
   padding: 10px;
@@ -191,8 +180,7 @@ textarea:focus {
 
 
 body {
-  margin: 15px;
- 
+  margin: 0px;
 }
 
 body .main {
@@ -200,11 +188,8 @@ body .main {
 }
 
 body .main .hero {
-  background-image: url(../img/hero.png);
-  background-size: contain;
-  height: 964px;
-  margin: 0;
-  width: 100%;
+ 
+  height: auto;
 }
 
 body .main .hero header .container {
@@ -321,7 +306,7 @@ body .main .hero .container-emphasis .container .message a:hover {
 }
 
 body .main .hero .container-emphasis .container .module {
-  max-width: 498px;
+  max-width: 980px;
   width: 100%;
   background-color: #5123B6;
   border-radius: 20px;
@@ -576,6 +561,11 @@ body .main #whyUs .wrap-whyus {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.form-background{
+    background-color: #5123B6;
+    border-radius: 20px;
 }
 
 body .main #whyUs .wrap-whyus__box {
