@@ -76,6 +76,11 @@ const completePacket = () => {
     .then((response) => response)
     //Then with the data from the response in JSON...
     .then((data) => {
+      swal({
+        title: "Thank You",
+        icon: "success",
+        button: "Ok!",
+      });
       console.log(url)
       console.log("Success:", data);
     })
