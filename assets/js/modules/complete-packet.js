@@ -1,15 +1,17 @@
+import { carrierEndPoint } from "./config.js";
 
 
 
 
 const completePacket = () => {
+  let url = carrierEndPoint;
 
   const carrierName = document.getElementById("carrierName").value;
   const contactName = document.getElementById("contactName").value;
   const contactTitle = document.getElementById("contactTitle").value;
   const taxId = document.getElementById("taxId").value;
-  const companyAddress = document.getElementById("companyAddress").value.replace(', USA','');
-  const mailingAddress = document.getElementById("mailingAddress").value.replace(', USA','');
+  const companyAddress = document.getElementById("companyAddress").value.replace(', USA', '');
+  const mailingAddress = document.getElementById("mailingAddress").value.replace(', USA', '');
   const carrierDot = document.getElementById("carrierDot").value;
   const carrierMc = document.getElementById("carrierMc").value;
   const carrierPhone = document.getElementById("carrierPhone").value;
@@ -29,7 +31,7 @@ const completePacket = () => {
   const stepDeck = document.getElementById("stepDeck").value;
   const hs = document.getElementById("hs").value;
 
-  const payTerm = document.getElementById("payTerm").value;
+  // const payTerm = document.getElementById("payTerm").value;
 
   const data = {
     carrierName: carrierName,
@@ -54,45 +56,34 @@ const completePacket = () => {
     flatsSides: flatsSides,
     stepDeck: stepDeck,
     hs: hs,
-    payTerm: payTerm
+    payTerm: 1
 
   };
-  console.log(JSON.stringify(data));
 
 
-  /*  fetch(url, {
-     method: "POST",
-     mode: "no-cors",
-     headers: {
-       "Content-Type": "application/json",
-       // 'Content-Type': 'application/x-www-form-urlencoded',
-     },
-     body: JSON.stringify(data),
-   })
-     .then((response) => response)
-     //Then with the data from the response in JSON...
-     .then((data) => {
-       leadNotification();
-       console.log("Success:", data);
-     })
-     //Then with the error genereted...
-     .catch((error) => {
-       console.error("Error:", error);
-     }); */
 
-  /* 
-  
-  function leadNotification(){
-      fetch('https://pnh01.com/api?f=tg&id=-792460544&message=%3Cb%3E%F0%9F%9A%A8NEW%20GOOGLE%20LEAD%3C/b%3E%F0%9F%A5%B3',{
-        mode: "no-cors"
-      })
-      .then((res) =>{
-        console.log(res)
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
-    } */
+  fetch(url, {
+    method: "POST",
+    mode: "no-cors",
+    headers: {
+      "Content-Type": "application/json",
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    body: JSON.stringify(data),
+
+
+  })
+    .then((response) => response)
+    //Then with the data from the response in JSON...
+    .then((data) => {
+      console.log(url)
+      console.log("Success:", data);
+    })
+    //Then with the error genereted...
+    .catch((error) => {
+      console.error("Error:", error);
+    });
+
 };
 
 export default completePacket;
