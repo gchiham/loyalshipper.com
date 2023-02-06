@@ -1,72 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/jobs.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/assets/fontawesome/css/all.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/jobs.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/assets/fontawesome/css/all.css" />
   </head>
 
-  <body >
-
- <div class="container">
-    <main>
-        <div class="py-5  text-center">
-            <img class="d-block mx-auto mb-4" src="../assets/img/LSlogo.png" alt="" width="100" >
-            <h2>Job application form</h2>
-            <p class="lead">Dear applicant, 
-            </p>
-            <p class="lead">Thank you for applying for the Freight/Auto Transport Broker position. <br>Please fill out the following form to determine your eligibility for the job.  
-                <br> appreciate your interest in joining our team at Loyal Shipper</p>
-            <p class="lead">
-               Sincerely,
-                The Recruitment Team</p>
+  <body>
+    <div class="container">
+      <main>
+        <div class="pt-5 text-center">
+          <img
+            class="d-block mx-auto mb-4"
+            src="../assets/img/LSlogo.png"
+            alt=""
+            width="100"
+          />
+          <h2>Job application form</h2>
+          <p class="lead">Dear applicant,</p>
+          <p class="lead">
+            Thank you for applying for the Freight/Auto Transport Broker
+            position. Please fill out the following form to determine your
+            eligibility for the job. <br />
+            appreciate your interest in joining our team at Loyal Shipper.
+          </p>
+          <p class="lead">Sincerely, The Recruitment Team</p>
         </div>
 
+        <div class="mx-auto px-5 text-white p-5 form-background">
+          <form id="applicationForm">
+            <div class="tab ">
+              <h3>General Information</h3>
 
-        <div class="mx-auto py-1 px-3">
-            <form>
-                <div class="tab text-white p-5 form-background">
-                      <h3>
-                        General Information
-                      </h3>
-                      <p class=""><mark>Note: Phone number must include country code example +504 and must have WhatsApp to be able to contact you.</mark>
-                      </p>
-                      <ul class="list-unstyled">
-                         <li><em>Do you possess the necessary equipment (computer and smartphone) for this position?</em></li>
-                         <li><em>Are you willing and able to work full-time?</em></li>
-                         <li><em>Can you work flexible hours, including evenings and weekends if needed?</em></li>
-
-                      </ul>
-                      <div class="row">
-                        <div class="col-sm-6">
-                            <label for="firstName" class="form-label">First name</label>
-                            <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-                            <div class="invalid-feedback">
-                              Valid first name is required.
-                            </div>
-                          </div>
-              
-                          <div class="col-sm-6">
-                            <label for="lastName" class="form-label">Last name</label>
-                            <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
-                            <div class="invalid-feedback">
-                              Valid last name is required.
-                            </div>
-                          </div>
-                      </div>
-
+              <div class="row">
+                <div class="col-sm-6">
+                  <label for="firstName" class="form-label">First name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="firstName"
+                    oninput="this.className = 'form-control'"
+                    placeholder="First name"
+                    value=""
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Valid first name is required.
+                  </div>
                 </div>
 
-            </form>
+                <div class="col-sm-6">
+                  <label for="lastName" class="form-label">Last name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    oninput="this.className = 'form-control'"
+                    id="lastName"
+                    placeholder="Last name"
+                    value=""
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Valid last name is required.
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <label for="email" class="form-label">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    oninput="this.className = 'form-control'"
+                    id="email"
+                    placeholder="you@example.com"
+                  />
+                  <div class="invalid-feedback">
+                    Please enter a valid email address for shipping updates.
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
+                  <label for="country" class="form-label">Country</label>
+                  <select class="form-select" id="country" required>
+                    <option value="">Choose...</option>
+                    <option>United States</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please select a valid country.
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <label for="phoneNumber" class="form-label">Phone Number</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="phoneNumber"
+                  placeholder="phone number"
+                  required
+                />
+                <div class="invalid-feedback">phone number</div>
+              </div>
+
+              <div class="py-3">
+                <p class="">
+                  <mark>Note:</mark> Phone number must include country code
+                  example +504 and must have WhatsApp to be able to contact you.
+                </p>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="q1" class="form-label"
+                    >Do you possess the necessary equipment (computer and
+                    smartphone) for this position?</label
+                  >
+                </div>
+
+                <div class="col-md-6">
+                  <select class="form-select" id="q1" required>
+                    <option value="">Choose...</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+                  <div class="invalid-feedback">Please select yes or not.</div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="q2" class="form-label"
+                    >Are you willing and able to work full-time?</label
+                  >
+                </div>
+                <div class="col-md-6">
+                  <select class="form-select" id="q2" required>
+                    <option value="">Choose...</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+                  <div class="invalid-feedback">Please select yes or not.</div>
+                </div>
+              </div>
+
+              <div class="row pt-3">
+                <div class="col-md-6">
+                  <label for="q3" class="form-label"
+                    >Can you work flexible hours, including evenings and
+                    weekends if needed?</label
+                  >
+                </div>
+                <div class="col-md-6">
+                  <select class="form-select" id="q3" required>
+                    <option value="">Choose...</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+                  <div class="invalid-feedback">Please select yes or not.</div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="tab">
+                 
+            </div>
+
+            <div class="tab">
+                 
+            </div>
+
+            <div class="pt-3">
+                <div style="float: right">
+                  <button
+                    class="btn btn-secondary"
+                    type="button"
+                    id="prevBtn"
+                    onclick="nextPrev(-1)"
+                  >
+                    Previous
+                  </button>
+                  <button
+                    class="btn btn-primary"
+                    type="button"
+                    id="nextBtn"
+                    onclick="nextPrev(1)"
+                  >
+                    Next
+                  </button>
+                </div>
+              </div>
+
+            <div style="text-align:center;margin-top:40px;">
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                
+              </div>
+          </form>
         </div>
-    
-    </main>
-         
-         </div>
-
-
-       
+      </main>
+    </div>
+    <script type="text/javascript" src="js/stepForm.js" >
+    </script>
   </body>
 </html>
