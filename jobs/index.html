@@ -34,7 +34,7 @@
 
         <div class="mx-auto px-5 text-white p-5 form-background">
           <form id="applicationForm">
-            <div class="tab ">
+            <div class="tab">
               <h3>General Information</h3>
 
               <div class="row">
@@ -47,7 +47,6 @@
                     oninput="this.className = 'form-control'"
                     placeholder="First name"
                     value=""
-                    required
                   />
                   <div class="invalid-feedback">
                     Valid first name is required.
@@ -63,7 +62,6 @@
                     id="lastName"
                     placeholder="Last name"
                     value=""
-                    required
                   />
                   <div class="invalid-feedback">
                     Valid last name is required.
@@ -166,49 +164,448 @@
                   <div class="invalid-feedback">Please select yes or not.</div>
                 </div>
               </div>
-
             </div>
 
             <div class="tab">
-                 
+              <h3 class="pb-2">Comprehension Test</h3>
+              <p class="lead">
+                <mark>INSTRUCTIONS:</mark>Read the following passage below and
+                answer the questions afterward.
+              </p>
+              <p>
+                As a result of years of research, we know that too much animal
+                fat is bad for our health. For example, Americans eat a lot of
+                meat and only a small amount of grains, fruit and vegetables.
+                Because of their diet, they have a high rate of cancer and heart
+                disease. In Japan, in contrast, people eat large amounts of
+                grains and very little meat. The Japanese also have very low
+                rates of cancer and heart disease. In fact, the Japanese live
+                longer than anyone else in the world. Unfortunately, when
+                Japanese people move to the United States, the rates of heart
+                disease and cancer increase as their diet changes. Moreover, as
+                hamburgers, ice cream, and other high-fat foods become popular
+                in Japan, the rates of heart disease and cancer are increasing
+                there as well. People are also eating more meat and dairy
+                products in other countries such as Cuba, Mauritius and Hungary.
+                Not surprisingly, the disease rates in these countries are
+                increasing along with the change in diet. Consequently, doctors
+                everywhere advise people to eat more grains and vegetables and
+                eat less meat and fewer dairy products.
+              </p>
             </div>
 
             <div class="tab">
-                 
+              <h3 class="pb-2">Comprehension Test</h3>
+              <h6>Q1. What is the main idea of this passage?</h6>
+              <div class="my-3">
+                <div class="form-check">
+                  <input
+                    id="q1Ans1"
+                    name="q1Ans"
+                    type="radio"
+                    class="form-check-input"
+                    required
+                  />
+                  <label class="form-check-label" for="q1Ans1"
+                    >The kind of diet we have can cause or prevent
+                    disease.</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    id="q1Ans2"
+                    name="q1Ans"
+                    type="radio"
+                    class="form-check-input"
+                    required
+                  />
+                  <label class="form-check-label" for="q1Ans2"
+                    >Doctors advise people to eat more grains, fruits and
+                    vegetables.</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    id="q1Ans3"
+                    name="q1Ans"
+                    type="radio"
+                    class="form-check-input"
+                    required
+                  />
+                  <label class="form-check-label" for="q1Ans3"
+                    >Children eat the same way their parents eat.</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    id="q1Ans4"
+                    name="q1Ans"
+                    type="radio"
+                    class="form-check-input"
+                    required
+                  />
+                  <label class="form-check-label" for="q1Ans4">
+                    Eating meat causes heart disease and cancer.</label
+                  >
+                </div>
+              </div>
+              <h6>
+                Q2. Why do the Japanese have low rates of cancer and heart
+                disease?
+              </h6>
+              <div class="my-3">
+                <div class="form-check">
+                  <input
+                    id="q2Ans1"
+                    name="q2Ans"
+                    type="radio"
+                    class="form-check-input"
+                    required
+                  />
+                  <label class="form-check-label" for="q2Ans1"
+                    >Because they eat a lot of grains and very little meat.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    id="q2Ans2"
+                    name="q2Ans"
+                    type="radio"
+                    class="form-check-input"
+                    required
+                  />
+                  <label class="form-check-label" for="q2Ans2"
+                    >Because their diet changes.</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    id="q2Ans3"
+                    name="q2Ans"
+                    type="radio"
+                    class="form-check-input"
+                    required
+                  />
+                  <label class="form-check-label" for="q2Ans3"
+                    >Because they live longer than anyone else in the
+                    world.</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    id="q2Ans4"
+                    name="q2Ans"
+                    type="radio"
+                    class="form-check-input"
+                    required
+                  />
+                  <label class="form-check-label" for="q2Ans4"
+                    >Because the do eat animal fat.</label
+                  >
+                </div>
+              </div>
+              <h6>
+                Q3. "________ the Japanese live longer than anyone else..." What
+                does anyone else mean?
+              </h6>
+              <div class="my-3">
+                <div class="form-check">
+                  <input
+                    id="q3Ans1"
+                    name="q3Ans"
+                    type="radio"
+                    class="form-check-input"
+                    required
+                  />
+                  <label class="form-check-label" for="q3Ans1"
+                    >all other people
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    id="q3Ans2"
+                    name="q3Ans"
+                    type="radio"
+                    class="form-check-input"
+                    required
+                  />
+                  <label class="form-check-label" for="q3Ans2"
+                    >most other people</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    id="q3Ans3"
+                    name="q3Ans"
+                    type="radio"
+                    class="form-check-input"
+                    required
+                  />
+                  <label class="form-check-label" for="q3Ans3">
+                    some other people</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    id="q3Ans4"
+                    name="q3Ans"
+                    type="radio"
+                    class="form-check-input"
+                    required
+                  />
+                  <label class="form-check-label" for="q3Ans4">nobody</label>
+                </div>
+              </div>
+              <h6>
+                Q4. "the rates of heart and disease and cancer are increasing
+                there as well."Where does there refer to?
+              </h6>
+              <div class="my-3">
+                <div class="form-check">
+                  <input
+                    id="q4Ans1"
+                    name="q4Ans"
+                    type="radio"
+                    class="form-check-input"
+                    required
+                  />
+                  <label class="form-check-label" for="q4Ans1">In Cuba </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    id="q4Ans2"
+                    name="q4Ans"
+                    type="radio"
+                    class="form-check-input"
+                    required
+                  />
+                  <label class="form-check-label" for="q4Ans2"
+                    >In Cuba, Mauritius and Hungary</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    id="q4Ans3"
+                    name="q4Ans"
+                    type="radio"
+                    class="form-check-input"
+                    required
+                  />
+                  <label class="form-check-label" for="q4Ans3">In Japan</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    id="q4Ans4"
+                    name="q4Ans"
+                    type="radio"
+                    class="form-check-input"
+                    required
+                  />
+                  <label class="form-check-label" for="q4Ans4"
+                    >In the United States</label
+                  >
+                </div>
+              </div>
             </div>
 
-            <div class="pt-3">
-                <div style="float: right">
-                  <button
-                    class="btn btn-secondary"
-                    type="button"
-                    id="prevBtn"
-                    onclick="nextPrev(-1)"
-                  >
-                    Previous
-                  </button>
-                  <button
-                    class="btn btn-primary"
-                    type="button"
-                    id="nextBtn"
-                    onclick="nextPrev(1)"
-                  >
-                    Next
-                  </button>
+            <div class="tab">
+              <h3 class="pb-2">Grammar Test</h3>
+              <h5>Wish vs Hope</h5>
+              <p>
+                <mark>Hope:</mark> To express something is very possible to
+                happen.
+              </p>
+              <p>
+                <mark>Wish:</mark> To express something that is impossible (not
+                likely) to happen. (Never use present simple tense for the
+                clause after wish).
+              </p>
+
+              <h6 class="mb-3">I __ that I had never met her.</h6>
+
+              <div class="my-3">
+                <div class="form-check">
+                  <input
+                    id="wish1"
+                    name="Gtq1"
+                    type="radio"
+                    class="form-check-input"
+                    required
+                  />
+                  <label class="form-check-label" for="wish1">Wish</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    id="hope1"
+                    name="Gtq1"
+                    type="radio"
+                    class="form-check-input"
+                    required
+                  />
+                  <label class="form-check-label" for="hope1">Hope</label>
                 </div>
               </div>
 
-            <div style="text-align:center;margin-top:40px;">
-                <span class="step"></span>
-                <span class="step"></span>
-                <span class="step"></span>
-                
+              <h6 class="mb-3">I __ that he will succeed.</h6>
+
+              <div class="my-3">
+                <div class="form-check">
+                  <input
+                    id="wish2"
+                    name="Gtq2"
+                    type="radio"
+                    class="form-check-input"
+                    required
+                  />
+                  <label class="form-check-label" for="wish2">Wish</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    id="hope2"
+                    name="Gtq2"
+                    type="radio"
+                    class="form-check-input"
+                    required
+                  />
+                  <label class="form-check-label" for="hope2">Hope</label>
+                </div>
               </div>
+
+              <h6 class="mb-3">
+                We __ that more women will decide to join the company.
+              </h6>
+
+              <div class="my-3">
+                <div class="form-check">
+                  <input
+                    id="wish3"
+                    name="Gtq3"
+                    type="radio"
+                    class="form-check-input"
+                    required
+                  />
+                  <label class="form-check-label" for="wish3">Wish</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    id="hope3"
+                    name="Gtq3"
+                    type="radio"
+                    class="form-check-input"
+                    required
+                  />
+                  <label class="form-check-label" for="hope3">Hope</label>
+                </div>
+              </div>
+
+              <h6 class="mb-3">He __ Jenny was with him.</h6>
+
+              <div class="my-3">
+                <div class="form-check">
+                  <input
+                    id="wish4"
+                    name="Gtq4"
+                    type="radio"
+                    class="form-check-input"
+                    required
+                  />
+                  <label class="form-check-label" for="wish4">Wish</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    id="hope4"
+                    name="Gtq4"
+                    type="radio"
+                    class="form-check-input"
+                    required
+                  />
+                  <label class="form-check-label" for="hope4">Hope</label>
+                </div>
+              </div>
+
+              <h6 class="mb-3">
+                I __ that all your efforts won't go for nothing.
+              </h6>
+
+              <div class="my-3">
+                <div class="form-check">
+                  <input
+                    id="wish5"
+                    name="Gtq5"
+                    type="radio"
+                    class="form-check-input"
+                    required
+                  />
+                  <label class="form-check-label" for="wish5">Wish</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    id="hope5"
+                    name="Gtq5"
+                    type="radio"
+                    class="form-check-input"
+                    required
+                  />
+                  <label class="form-check-label" for="hope5">Hope</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab">
+              <h3 class="pb-2">Pronunciation Test</h3>
+              <p>Please record the following sentences:</p>
+              <p>
+                Loyal Shipper is a transport brokerage company. We are providing
+                services to shippers and carriers. Our goal is to provide our
+                shippers with a quality service.
+              </p>
+              <phonic-embed
+                mode="audio"
+                surveyid="paste-survey-id"
+                questionid="paste-question-id"
+              >
+              </phonic-embed>
+              <script
+                type="text/javascript"
+                src="https://api.phonic.ai/phonic-embed.min.js"
+              ></script>
+              <p>
+                The dispatch department's main goal is to help our brokers to gather the correct information from carriers.
+              </p>
+            </div>
+
+            <div class="pt-3">
+              <div style="float: right">
+                <button
+                  class="btn btn-light"
+                  type="button"
+                  id="prevBtn"
+                  onclick="nextPrev(-1)"
+                >
+                  Previous
+                </button>
+                <button
+                  class="btn btn-primary"
+                  type="button"
+                  id="nextBtn"
+                  onclick="nextPrev(1)"
+                >
+                  Next
+                </button>
+              </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px">
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+            </div>
           </form>
         </div>
       </main>
     </div>
-    <script type="text/javascript" src="js/stepForm.js" >
-    </script>
+    <script type="text/javascript" src="js/stepForm.js"></script>
   </body>
 </html>
