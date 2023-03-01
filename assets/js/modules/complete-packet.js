@@ -3,10 +3,17 @@ import { carrierEndPoint } from "./config.js";
 
 
 
+
 const completePacket = () => {
   let url = carrierEndPoint;
+  $("#completePacket").prop("disabled", true);
+ 
+  $("#completePacket").html(
+    `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Generating...`
+  );
 
   const carrierName = document.getElementById("carrierName").value;
+  const fileName = carrierName.replace(/ /g, '_');
   const contactName = document.getElementById("contactName").value;
   const taxId = document.getElementById("taxId").value;
   const companyAddress = document.getElementById("companyAddress").value.replace(', USA', '');
@@ -28,6 +35,7 @@ const completePacket = () => {
 
   const data = {
     jsonValue: {
+      fileName: fileName,
       carrierName: carrierName,
       carrierContact: contactName,
       taxId: taxId,
@@ -72,6 +80,9 @@ const completePacket = () => {
       });
 
       console.log("Success:", data);
+      $("#completePacket").html(
+        `Complete`
+      );
     })
     //Then with the error genereted...
     .catch((error) => {
