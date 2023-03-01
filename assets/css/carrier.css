@@ -353,6 +353,10 @@ body .main .hero .container-emphasis .container .module form .wrap-form label {
   color: #ffffff;
 }
 
+.hide{
+  display: none;
+}
+
 
 
 body .main .hero .container-emphasis .container .module form h3 {

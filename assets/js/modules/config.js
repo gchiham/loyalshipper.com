@@ -11,4 +11,4 @@ export const KeyEs = '48ea5f16-ed31-4993-ac2d-f4c60ba7dad6';
 
 export const carTypeKey = 'Vjcg1k6loyLgR9NGDn6kuiBJUGbIBOFA36iICttpJFaVgyyCxrsrFXCnb4lZ';
 
-export const carrierEndPoint = 'https://api.loyalme.net/contract/generate-pdf'
+export const carrierEndPoint = 'https://script.google.com/macros/s/AKfycbyoP1YcfwUzCrMB2RO0Sd3iZ_hw7nlvfX_MDu8kkFCLdyLKiEpuXokq7VnxTZOCK9MpXA/exec'

@@ -5,6 +5,12 @@ import { callCarsApi } from './modules/carTypeApi.js';
 import completePacket from './modules/complete-packet.js?r=1'
 
 
+
+
+
+
+
+
 $(document).ready(function () {
 
 	if (document.URL.indexOf("/carrier") >= 0) {
@@ -17,6 +23,17 @@ $(document).ready(function () {
 		callCarsApi();
 
 	}
+
+	$('#flexSwitchCheckChecked').on('change', function() {
+		var element = document.getElementById("factoringInfo");
+		
+		if ($(this).is(':checked')) {
+			element.classList.remove("hide");
+		  } else {
+			element.classList.add("hide");
+		  }
+
+	});
 
 
 
@@ -35,6 +52,5 @@ else {
 		onAnalyticsTracker();
 	});
 }
-
 
 
