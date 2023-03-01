@@ -7,7 +7,7 @@ import { carrierEndPoint } from "./config.js";
 const completePacket = () => {
   let url = carrierEndPoint;
   $("#completePacket").prop("disabled", true);
- 
+
   $("#completePacket").html(
     `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Generating...`
   );
@@ -25,9 +25,9 @@ const completePacket = () => {
   const driverName = document.getElementById("driverName").value;
   const driverPhone = document.getElementById("driverPhone").value;
 
-  const factoringName = document.getElementById("factoringName").value;
-  const factoringEmail = document.getElementById("factoringEmail").value;
-  const factoringPhone = document.getElementById("factoringPhone").value;
+  const factoringName =  document.getElementById("factoringName").value ? document.getElementById("factoringName").value : ' ';
+  const factoringEmail = document.getElementById("factoringEmail").value ?  document.getElementById("factoringEmail").value : ' ';
+  const factoringPhone = document.getElementById("factoringPhone").value ? document.getElementById("factoringPhone").value : ' ';
 
 
 
