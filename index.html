@@ -537,7 +537,9 @@
 	const autoCompleteJS = new autoComplete({
 		selector: "#originPlace",
 		placeHolder: "Enter City or Zip Code",
-		debounce: 100,
+		threshold: 2,
+		debounce: 350,
+		maxResults: 15,
 
 		data: {
 			src: async (query) => {
@@ -545,8 +547,6 @@
 				const source = await fetch(`https://quote.apcargoexpress.com/api?f=zip.lookup&q=${query}`);
 				// Data is array of `Objects` | `Strings`
 				const data = await source.json();
-
-				xasd
 
 				//console.log(data)
 				results = true;
@@ -618,7 +618,7 @@
 				const source = await fetch(`https://quote.apcargoexpress.com/api?f=zip.lookup&q=${query}`);
 				// Data is array of `Objects` | `Strings`
 				const data = await source.json();
-				console.log('RESULTS', data)
+
 				resultsDtp = true
 				return data.data;
 			},
