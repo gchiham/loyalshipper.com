@@ -531,6 +531,8 @@
 
 <script>
 
+	console.log('v1.0.9');
+
 	var results = false;
 	const autoCompleteJS = new autoComplete({
 		selector: "#originPlace",
@@ -602,13 +604,12 @@
          }
      });
 
-
 	var resultsDtp = false;
 	const autoCompleteTo = new autoComplete({
          selector: "#destinationPlace",
          placeHolder: "Enter City or Zip Code",
 		 threshold: 2,
-		 debounce: 250,
+		 debounce: 350,
 		 maxResults: 15,
 
 		data: {
@@ -671,8 +672,6 @@
 			}
 		}
      });
-
-	 console.log('v1.0.8');
 
  </script>
 <script src="//code.tidio.co/ednrhu40m9osjvmt1xpy4vemripc7bea.js" async></script>
