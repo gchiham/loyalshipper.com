@@ -543,6 +543,9 @@
 				const source = await fetch(`https://quote.apcargoexpress.com/api?f=zip.lookup&q=${query}`);
 				// Data is array of `Objects` | `Strings`
 				const data = await source.json();
+
+				xasd
+
 				//console.log(data)
 				results = true;
 				return data.data;
@@ -604,7 +607,9 @@
 	const autoCompleteTo = new autoComplete({
          selector: "#destinationPlace",
          placeHolder: "Enter City or Zip Code",
-		 debounce: 100,
+		 threshold: 2,
+		 debounce: 250,
+		 maxResults: 15,
 
 		data: {
 			src: async (query) => {
@@ -612,7 +617,7 @@
 				const source = await fetch(`https://quote.apcargoexpress.com/api?f=zip.lookup&q=${query}`);
 				// Data is array of `Objects` | `Strings`
 				const data = await source.json();
-				//console.log(data)
+				console.log('RESULTS', data)
 				resultsDtp = true
 				return data.data;
 			},
@@ -667,7 +672,7 @@
 		}
      });
 
-	 console.log('v1.0.7');
+	 console.log('v1.0.8');
 
  </script>
 <script src="//code.tidio.co/ednrhu40m9osjvmt1xpy4vemripc7bea.js" async></script>
