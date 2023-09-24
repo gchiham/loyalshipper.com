@@ -11,7 +11,10 @@ a {
   transition: all ease-in-out .3s;
 }
 
-
+.form-user-message{
+  color: #ffffff;
+  font-size: small;
+}
 
 
 a:hover {
